@@ -1,0 +1,5 @@
+[user]
+	name = korczas
+	email = korczas+github@gmail.com
+[core]
+	excludesfile = /Users/bartosz/.gitignore
