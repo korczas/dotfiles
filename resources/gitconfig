@@ -1,7 +1,7 @@
 [user]
-  email = bartoszmaka95@gmail.com
-  user = Bartosz Mąka
-  username = bartoszmaka
+  email = korczas@gmail.com
+  user = Kamil Korczynski
+  username = korczas
 [core]
   editor = nvim
   excludesfile = ~/.gitignore
