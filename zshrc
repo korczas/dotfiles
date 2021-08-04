@@ -35,6 +35,12 @@ export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --hidden -g '!.git/' -g '
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export DOTFILES_PATH="$HOME/.repos/dotfiles"
 
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOROOT/bin
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
 test -e "~/.bin/tmuxinator.zsh" && source "~/.bin/tmuxinator.zsh"
 
 alias tmux="tmux -u"
@@ -86,6 +92,7 @@ alias :wqa=exit
 
 alias dcu="docker-compose up"
 alias dcd="docker-compose down"
+alias ywc="yarn workspace client"
 
 alias cbc=compare_branch_commits
 function compare_branch_commits() {
@@ -114,7 +121,7 @@ export PATH="/usr/local/bin:$PATH" # make sure homebrew bins are before osx bins
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
 zstyle ':completion:*' menu select
 export PATH="/usr/local/sbin:$PATH"
-. $(brew --prefix asdf)/asdf.sh
+. ~/.asdf/asdf.sh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 # export PATH="$PATH:$HOME/.rvm/bin"
