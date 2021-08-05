@@ -67,19 +67,19 @@
 - install plugins, that are not downloaded by default
 
   [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-  
+
   ``` bash
   git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
   ```
-  
+
   [alias-tips](https://github.com/djui/alias-tips)
-  
+
   ``` bash
   git clone https://github.com/djui/alias-tips.git $ZSH_CUSTOM/plugins/alias-tips
   ```
-  
+
   [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-  
+
   ``` bash
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
   ```
@@ -89,7 +89,7 @@
   ``` bash
   https://github.com/agkozak/zsh-z
   ```
-  
+
 #### [tmux](https://github.com/tmux/tmux/wiki)
 - install tmux
   ```
@@ -133,10 +133,10 @@ brew cask install spectacle slack flux iterm2
 
 #### References
 
-[https://github.com/ggreer/the_silver_searcher](https://github.com/ggreer/the_silver_searcher)  
-[https://askubuntu.com/questions/141752/keyboard-shortcut-to-move-windows-between-monitors](https://askubuntu.com/questions/141752/keyboard-shortcut-to-move-windows-between-monitors)  
-[https://pilotmoon.com/scrollreverser/](https://pilotmoon.com/scrollreverser/)  
-[alt left / right behavior for iterm2](https://apple.stackexchange.com/questions/136928/using-alt-cmd-right-left-arrow-in-iterm)  
-[sync iterm2 with dotfiles](http://stratus3d.com/blog/2015/02/28/sync-iterm2-profile-with-dotfiles-repository/)  
+[https://github.com/ggreer/the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
+[https://askubuntu.com/questions/141752/keyboard-shortcut-to-move-windows-between-monitors](https://askubuntu.com/questions/141752/keyboard-shortcut-to-move-windows-between-monitors)
+[https://pilotmoon.com/scrollreverser/](https://pilotmoon.com/scrollreverser/)
+[alt left / right behavior for iterm2](https://apple.stackexchange.com/questions/136928/using-alt-cmd-right-left-arrow-in-iterm)
+[sync iterm2 with dotfiles](http://stratus3d.com/blog/2015/02/28/sync-iterm2-profile-with-dotfiles-repository/)
 [F1-F48 hex codes](http://aperiodic.net/phil/archives/Geekery/term-function-keys.html)
 [Ctrl+key hex codes](http://www.physics.udel.edu/~watson/scen103/ascii.html)
