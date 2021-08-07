@@ -7,6 +7,11 @@ ln -vsf ~/.repos/dotfiles/git/.gitconfig ~/.gitconfig
 ln -vsf ~/.repos/dotfiles/git/.gitignore_global ~/.gitignore_global
 ln -vsf ~/.repos/dotfiles/zsh/.zshrc ~/.zshrc
 
+ln -vsf ~/.repos/dotfiles/nvim/lua ~/.config/nvim
+ln -vsf ~/.repos/dotfiles/nvim/UltiSnips ~/.config/nvim
+ln -vsf ~/.repos/dotfiles/nvim/coc-settings.json ~/.config/nvim
+ln -vsf ~/.repos/dotfiles/nvim/init.lua ~/.config/nvim
+
 case "$(uname -s)" in
   Darwin)
     # mkdir -p ~/Library/Application\ Support/Code/User

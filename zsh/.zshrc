@@ -39,9 +39,7 @@ test -e "~/.bin/tmuxinator.zsh" && source "~/.bin/tmuxinator.zsh"
 
 alias tmux="tmux -u"
 alias tnew="\tmux -u new-session -t main"
-alias spacevim="nvim -u ~/.SpaceVim/init.vim"
-alias svimrc="$EDITOR ~/.SpaceVim.d/init.toml"
-alias vimrc="cd $DOTFILES_PATH; $EDITOR $DOTFILES_PATH/vim/lua/plugins/init.lua; cd -"
+alias vimrc="cd $DOTFILES_PATH; $EDITOR $DOTFILES_PATH/nvim/lua/plugins/init.lua; cd -"
 alias zshrc="$EDITOR $DOTFILES_PATH/zshrc"
 alias coderc="code $DOTFILES_PATH/vscode/settings.json $DOTFILES_PATH/vscode/keybindings.json"
 alias alacrittyrc="$EDITOR $DOTFILES_PATH/alacritty.yml"
@@ -113,6 +111,7 @@ export PATH="/usr/local/bin:$PATH" # make sure homebrew bins are before osx bins
 zstyle ':completion:*' menu select
 export PATH="/usr/local/sbin:$PATH"
 . ~/.asdf/asdf.sh
+
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 # export PATH="$PATH:$HOME/.rvm/bin"

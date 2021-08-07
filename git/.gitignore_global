@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,vim,node,ruby,rails,go
-# Edit at https://www.toptal.com/developers/gitignore?templates=macos,visualstudiocode,vim,node,ruby,rails,go
+# Created by https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,vim,node,ruby,rails,go,tags
+# Edit at https://www.toptal.com/developers/gitignore?templates=macos,visualstudiocode,vim,node,ruby,rails,go,tags
 
 ### Go ###
 # Binaries for programs and plugins
@@ -288,6 +288,24 @@ build-iPhoneSimulator/
 # Used by RuboCop. Remote config files pulled in from inherit_from directive.
 # .rubocop-https?--*
 
+### Tags ###
+# Ignore tags created by etags, ctags, gtags (GNU global) and cscope
+TAGS
+.TAGS
+!TAGS/
+tags
+.tags
+!tags/
+gtags.files
+GTAGS
+GRTAGS
+GPATH
+GSYMS
+cscope.files
+cscope.out
+cscope.in.out
+cscope.po.out
+
 ### Vim ###
 # Swap
 [._]*.s[a-v][a-z]
@@ -305,7 +323,6 @@ Sessionx.vim
 .netrwhist
 *~
 # Auto-generated tag files
-tags
 # Persistent undo
 [._]*.un~
 
@@ -325,4 +342,8 @@ tags
 .history
 .ionide
 
-# End of https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,vim,node,ruby,rails,go
+### asdf ###
+# Ignore all local history of files
+.tool-versions
+
+# End of https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,vim,node,ruby,rails,go,tags

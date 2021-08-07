@@ -5,7 +5,7 @@
 
 [core]
   editor = vim
-  excludesfile = ~/.global_gitignore
+  excludesfile = ~/.gitignore_global
   ; pager = diff-so-fancy | less --tabs=2 -RFX
   pager = delta --plus-color="#283c34" --minus-color="#382c34" --theme='TwoDark'
 
