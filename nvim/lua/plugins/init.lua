@@ -205,6 +205,6 @@ require('plugins.colorscheme')
 
 vim.cmd [[autocmd BufWritePost init.lua PackerCompile]]
 vim.cmd [[
-  nnoremap gj ddp 
+  nnoremap gj ddp
   nnoremap gk ddkkp
 ]]

@@ -26,21 +26,9 @@ local function setup_servers()
       lspconf[lang].setup {
         cmd = { "solargraph", "stdio" },
         flags = { debounce_text_changes = 150, },
-        on_attach = on_attach, --- https://github.com/neovim/nvim-lspconfig
+        on_attach = on_attach,
         root_dir = vim.loop.cwd,
         capabilities = capabilities,
-      }
-    elseif lang == "tsserver" then
-      lspconf.tsserver.setup {
-        capabilities = capabilities,
-        cmd = { "typescript-language-server", "--stdio" },
-        filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
-        init_options = {
-          hostInfo = "neovim"
-        },
-        root_dir = root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git"),
-        flags = { debounce_text_changes = 150, }, --- https://github.com/neovim/nvim-lspconfig
-        on_attach = on_attach, --- https://github.com/neovim/nvim-lspconfig
       }
     elseif lang == "lua" then
       lspconf[lang].setup {

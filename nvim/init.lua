@@ -16,3 +16,8 @@ vim.cmd [[
   set expandtab
   set softtabstop=2
 ]]
+vim.cmd [[
+  set relativenumber
+  set number
+  set number relativenumber
+]]
