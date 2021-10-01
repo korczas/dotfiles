@@ -85,7 +85,6 @@ alias :wqa=exit
 
 alias dcu="docker-compose up"
 alias dcd="docker-compose down"
-alias ywc="yarn workspace client"
 
 alias cbc=compare_branch_commits
 function compare_branch_commits() {
