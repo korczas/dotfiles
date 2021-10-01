@@ -1,7 +1,8 @@
 [user]
-  email = korczas@gmail.com
+	email = korczas@gmail.com
   user = Kamil Korczynski
   username = korczas
+	name = Kamil Korczynski
 
 [core]
   editor = vim
