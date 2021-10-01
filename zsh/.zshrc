@@ -73,6 +73,7 @@ alias mailcatcher='echo "running mailcatcher --foreground. If you want to use de
 alias tf="terraform"
 alias ls="exa"
 alias cat="bat"
+alias python=/usr/local/bin/python3
 
 alias glcean="git clean -fd"
 
