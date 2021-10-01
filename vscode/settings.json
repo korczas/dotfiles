@@ -1,0 +1,73 @@
+{
+  "[markdown]": {
+    "editor.quickSuggestions": true,
+    "editor.suggest.showSnippets": false,
+    "editor.tabSize": 2,
+    "editor.wordBasedSuggestions": false
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": ["source.formatDocument", "source.fixAll.eslint"],
+  "editor.cursorBlinking": "solid",
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 3,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "Operator Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 17,
+  "editor.fontWeight": "400",
+  "editor.formatOnSave": false,
+  "editor.letterSpacing": 0.5,
+  "editor.lineHeight": 25,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [80, 100, 120],
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "eslint.format.enable": false,
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.openEditors.visible": 0,
+  "extensions.ignoreRecommendations": false,
+  "files.enableTrash": false,
+  "files.exclude": {
+    "**/tags": true,
+    "node_modules/": true
+  },
+  "files.trimTrailingWhitespace": true,
+  "git.enableSmartCommit": true,
+  "git.path": "/usr/bin/git",
+  "git.requireGitUserConfig": false,
+  "gitlens.codeLens.enabled": false,
+  "gitlens.hovers.avatars": false,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.statusBar.enabled": false,
+  "go.toolsManagement.autoUpdate": true,
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "javascript.preferences.importModuleSpecifierEnding": "minimal",
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "javascript.validate.enable": false,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "prettier.singleQuote": true,
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "[ ]",
+    "[x]"
+  ],
+  "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifierEnding": "minimal",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.colorTheme": "Bluloco Dark Italic",
+  "workbench.editor.focusRecentEditorAfterClose": false
+}
