@@ -18,9 +18,22 @@
 #    ;;
 #esac
 
-#asdf plugin-add postgres
-#asdf plugin-add ruby
-#asdf plugin-add python
-#asdf plugin-add nodejs
-#asdf plugin-add rust
-#asdf plugin-add redis
+
+brew install \
+    asdf \
+    diff-so-fancy \
+    fzf \
+    git \
+    git-delta \
+    htop \
+    tmux \
+    yarn \
+    zsh
+
+brew install --cask \
+    visual-studio-code \
+    alacritty 
+    
+asdf plugin add nodejs
+asdf plugin add golang
+
