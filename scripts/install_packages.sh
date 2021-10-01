@@ -27,6 +27,7 @@ brew install \
     git \
     git-delta \
     htop \
+    python@3.7 \
     tmux \
     yarn \
     zsh
