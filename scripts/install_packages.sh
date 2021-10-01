@@ -21,6 +21,7 @@
 
 brew install \
     asdf \
+    bat \
     diff-so-fancy \
     exa \
     fzf \
