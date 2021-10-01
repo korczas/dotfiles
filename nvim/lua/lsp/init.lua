@@ -53,6 +53,16 @@ local function setup_servers()
           }
         }
       }
+    elseif lang == "tsserver" then
+      lspconf.tsserver.setup {
+        on_attach = function(client)
+          if client.config.flags then
+            client.config.flags.allow_incremental_sync = true
+          end
+          client.resolved_capabilities.document_formatting = false
+          set_lsp_config(client)
+        end
+      }
     elseif lang == "efm" then
       lspconf[lang].setup {
         settings = {
