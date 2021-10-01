@@ -22,6 +22,7 @@
 brew install \
     asdf \
     diff-so-fancy \
+    exa \
     fzf \
     git \
     git-delta \
