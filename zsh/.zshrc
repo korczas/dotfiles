@@ -63,6 +63,7 @@ RPROMPT='%D{%K:%M:%S}'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 fpath=(/usr/local/share/zsh-completions $fpath)
 export PATH="/usr/local/bin:$PATH" # make sure homebrew bins are before osx bins
+export K8S_MANIFESTS_DIR="$HOME/projects/k8s-manifests"
 
 zstyle ':completion:*' menu select
 # . ~/.asdf/asdf.sh #in case asdf is installed from source code
