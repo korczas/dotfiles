@@ -27,6 +27,7 @@ brew install \
     fzf \
     git \
     git-delta \
+    gnupg \
     htop \
     python@3.7 \
     tmux \
@@ -35,8 +36,8 @@ brew install \
 
 brew install --cask \
     visual-studio-code \
-    alacritty 
-    
+    alacritty
+
 asdf plugin add nodejs
 asdf plugin add golang
 
