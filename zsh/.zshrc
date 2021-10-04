@@ -65,7 +65,9 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 export PATH="/usr/local/bin:$PATH" # make sure homebrew bins are before osx bins
 
 zstyle ':completion:*' menu select
-# . ~/.asdf/asdf.sh
+# . ~/.asdf/asdf.sh #in case asdf is installed from source code
+
+GOPRIVATE="github.com/karhoo/*"
 
 # export PATH="$PATH:$HOME/.rvm/bin"
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
