@@ -48,6 +48,7 @@ alias yi="yarn install"
 alias ls="exa"
 alias cat="bat"
 alias python=/usr/local/bin/python3
+alias pip=/usr/local/bin/pip3
 
 alias gcof="git checkout \$(git branch -a | fzf)"
 
