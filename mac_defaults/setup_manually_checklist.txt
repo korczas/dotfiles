@@ -1,2 +1,3 @@
 - Preferences -> Notifications
 - Preferences -> Internet accounts
+- Preferences -> Mission Control -> trun off "Automatically rearrange Spaces ..."

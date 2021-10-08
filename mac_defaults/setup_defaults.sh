@@ -26,10 +26,24 @@ defaults write com.apple.Finder "AppleShowAllFiles" -bool TRUE
 ### enable "Quit" option
 # defaults write com.apple.finder "QuitMenuItem" -bool FALSE && killall Finder
 
+## menu bar
+### hide spotlight icon
+defaults write com.apple.Spotlight.MenuItemHidden -int 1
+### show percentage next to battery icon
+defaults write com.apple.controlcenter.BatteryShowPercentage -int 1
+### show bluetooth icon
+defaults write com.apple.controlcenter.Bluetooth -int 18
+### show dnd icon
+defaults write com.apple.controlcenter.DoNotDisturb -int 2
+
+## screen saver
+defaults write com.apple.screensaver.idleTime -int 0
+defaults write com.apple.screensaver.lastDelayTime -int 1200
 
 
-
-
-# defaults write com.apple.systemuiserver menuExtras -array \
-# "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
-# "/System/Library/CoreServices/Menu Extras/Volume.menu"
+# "com.apple.keyboard.modifiermapping.1452-832-0" =         (
+#                 {
+#         HIDKeyboardModifierMappingDst = 30064771113;
+#         HIDKeyboardModifierMappingSrc = 30064771129;
+#     }
+# );
