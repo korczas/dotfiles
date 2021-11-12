@@ -47,8 +47,8 @@ alias ys="yarn start"
 alias yi="yarn install"
 alias ls="exa"
 alias cat="bat"
-alias python=/usr/local/bin/python3
-alias pip=/usr/local/bin/pip3
+alias python=python3
+alias pip=pip3
 
 alias gcof="git checkout \$(git branch -a | fzf)"
 
@@ -62,7 +62,6 @@ function compare_branch_commits() {
 
 RPROMPT='%D{%K:%M:%S}'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-fpath=(/usr/local/share/zsh-completions $fpath)
 export PATH="/usr/local/bin:$PATH" # make sure homebrew bins are before osx bins
 export K8S_MANIFESTS_DIR="$HOME/projects/k8s-manifests"
 
@@ -70,6 +69,7 @@ zstyle ':completion:*' menu select
 # . ~/.asdf/asdf.sh #in case asdf is installed from source code
 
 GOPRIVATE="github.com/karhoo/*"
+export PATH="$HOME/go/bin:$PATH"
 
 # export PATH="$PATH:$HOME/.rvm/bin"
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
@@ -82,3 +82,9 @@ if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/
 
 # The next line enables shell command completion for gcloud.
 if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+export VAULT_ADDR=https://vault.karhoo.com
