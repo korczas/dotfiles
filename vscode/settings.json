@@ -74,6 +74,7 @@
   },
   "prettier.singleQuote": true,
   "redhat.telemetry.enabled": false,
+  "terminal.integrated.fontFamily": "MesloLGS NF",
   "todo-tree.general.tags": [
     "BUG",
     "HACK",
