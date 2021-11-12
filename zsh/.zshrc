@@ -20,6 +20,7 @@ esac
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+export DISABLE_MAGIC_FUNCTIONS=true
 source $ZSH/oh-my-zsh.sh
 
 export BAT_THEME='TwoDark'
