@@ -33,7 +33,6 @@ brew install \
     python@3.7 \
     ripgrep \
     tmux \
-    yarn \
     zsh
 
 brew install --cask \

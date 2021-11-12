@@ -16,7 +16,7 @@ esac
 [ "$isosx" = true ] &&
   export DEFAULT_USER=`whoami` &&
   export ZSH=$HOME/.oh-my-zsh &&
-  plugins=(git tmux common-aliases z rails zsh-autosuggestions zsh-syntax-highlighting alias-tips brew)
+  plugins=(git tmux common-aliases z zsh-autosuggestions zsh-syntax-highlighting alias-tips brew asdf)
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
@@ -83,9 +83,5 @@ if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/
 
 # The next line enables shell command completion for gcloud.
 if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
-
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 export VAULT_ADDR=https://vault.karhoo.com
