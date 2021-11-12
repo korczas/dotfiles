@@ -63,7 +63,7 @@ function compare_branch_commits() {
 
 RPROMPT='%D{%K:%M:%S}'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH="/usr/local/bin:$PATH" # make sure homebrew bins are before osx bins
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH" # make sure homebrew bins are before osx bins
 export K8S_MANIFESTS_DIR="$HOME/projects/k8s-manifests"
 
 zstyle ':completion:*' menu select
