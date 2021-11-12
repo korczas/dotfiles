@@ -25,11 +25,13 @@ brew install \
     diff-so-fancy \
     exa \
     fzf \
+    gh \
     git \
     git-delta \
     gnupg \
     htop \
     python@3.7 \
+    ripgrep \
     tmux \
     yarn \
     zsh
