@@ -36,9 +36,9 @@ brew install \
     zsh
 
 brew install --cask \
-    visual-studio-code \
-    alacritty
+    alacritty \
+    karabiner-elements \
+    visual-studio-code
 
 asdf plugin add nodejs
 asdf plugin add golang
-
