@@ -53,6 +53,10 @@ alias pip=pip3
 
 alias gcof="git checkout \$(git branch -a | fzf)"
 
+alias heictojpg="magick mogrify -monitor -format jpg *.HEIC"
+
+# docker aliases
+#alias dcc="docker rm -f $(docker ps -a | grep ... | cut -c -12)"
 alias dcu="docker-compose up"
 alias dcd="docker-compose down"
 

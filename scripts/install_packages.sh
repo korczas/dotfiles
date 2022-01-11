@@ -30,6 +30,7 @@ brew install \
     git-delta \
     gnupg \
     htop \
+    imagemagick \
     python@3.7 \
     ripgrep \
     tmux \
@@ -38,7 +39,10 @@ brew install \
 brew install --cask \
     alacritty \
     karabiner-elements \
-    visual-studio-code
+    transmission \
+    qnapi \
+    visual-studio-code \
+    vlc
 
 asdf plugin add nodejs
 asdf plugin add golang
