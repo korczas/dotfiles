@@ -31,7 +31,6 @@ export DOTFILES_PATH="$HOME/.repos/dotfiles"
 alias tmux="tmux -u"
 alias tnew="\tmux -u new-session -t main"
 alias zshrc="$EDITOR $DOTFILES_PATH/zshrc"
-alias coderc="code $DOTFILES_PATH/vscode/settings.json $DOTFILES_PATH/vscode/keybindings.json"
 alias alacrittyrc="$EDITOR $DOTFILES_PATH/alacritty.yml"
 alias tmuxrc="$EDITOR ~/.tmux.conf"
 alias dotfiles="cd $DOTFILES_PATH"
@@ -76,7 +75,6 @@ zstyle ':completion:*' menu select
 GOPRIVATE="github.com/karhoo/*"
 export PATH="$HOME/go/bin:$PATH"
 
-# export PATH="$PATH:$HOME/.rvm/bin"
 POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
