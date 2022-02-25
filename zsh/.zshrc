@@ -56,7 +56,14 @@ alias heictojpg="magick mogrify -monitor -format jpg *.HEIC"
 
 # docker aliases
 function dcc(){
-  docker rm -f $(docker ps -a | grep ... | cut -c -12)
+  containers=$(docker ps -a | grep ... | cut -c -12)
+  if [[ -n $containers ]]
+  then
+    echo "Removing containers: " $containers
+    docker rm -f $(docker ps -a | grep ... | cut -c -12)
+  else
+    echo "There are no containers to remove."
+  fi
 }
 alias dcu="docker-compose up"
 alias dcd="docker-compose down"
