@@ -24,6 +24,7 @@ brew install \
     bat \
     diff-so-fancy \
     exa \
+    firefox \
     fzf \
     gh \
     git \
