@@ -1,3 +1,4 @@
+#TODO: export karhoo specific configs to different file
 setopt EXTENDED_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_DUPS
@@ -53,6 +54,7 @@ alias pip=pip3
 alias gcof="git checkout \$(git branch -a | fzf)"
 
 alias heictojpg="magick mogrify -monitor -format jpg *.HEIC"
+alias s="sculptor"
 
 # docker aliases
 function dcc(){
@@ -96,3 +98,7 @@ if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/
 if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
 
 export VAULT_ADDR=https://vault.karhoo.com
+
+if [ -d "$HOME/projects/k-tools" ]; then
+    export PATH="$HOME/projects/k-tools/bin:$PATH"
+fi
