@@ -40,8 +40,9 @@ brew install \
 brew install --cask \
     alacritty \
     karabiner-elements \
-    transmission \
+    postman
     qnapi \
+    transmission \
     visual-studio-code \
     vlc
 
