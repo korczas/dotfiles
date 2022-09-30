@@ -21,6 +21,9 @@
     "editor.tabSize": 2,
     "editor.wordBasedSuggestions": false
   },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -28,10 +31,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.bracketPairColorization.enabled": true,
-  "editor.codeActionsOnSave": [
-    "source.formatDocument",
-    "source.fixAll.eslint"
-  ],
+  "editor.codeActionsOnSave": ["source.formatDocument", "source.fixAll.eslint"],
   "editor.cursorBlinking": "solid",
   "editor.cursorStyle": "line",
   "editor.cursorWidth": 3,
@@ -40,15 +40,11 @@
   "editor.fontWeight": "400",
   "editor.formatOnSave": false,
   "editor.guides.bracketPairs": true,
+  "editor.inlineSuggest.enabled": true,
   "editor.letterSpacing": 0.5,
   "editor.lineHeight": 25,
   "editor.renderWhitespace": "trailing",
-  "editor.rulers": [
-    80,
-    100,
-    110,
-    120
-  ],
+  "editor.rulers": [80, 100, 110, 120],
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
   "eslint.format.enable": false,
@@ -75,6 +71,7 @@
   "gitlens.hovers.avatars": false,
   "gitlens.hovers.currentLine.over": "line",
   "gitlens.statusBar.enabled": false,
+  "go.coverOnSingleTest": true,
   "go.toolsManagement.autoUpdate": true,
   "gopls": {
     "ui.semanticTokens": true
@@ -103,9 +100,20 @@
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.preferences.importModuleSpecifierEnding": "minimal",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "window.zoomLevel": -1,
   "workbench.colorTheme": "Bluloco Dark Italic",
   "workbench.editor.focusRecentEditorAfterClose": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.layoutControl.enabled": false,
   "workbench.tree.indent": 24,
-  "workbench.tree.renderIndentGuides": "always"
+  "workbench.tree.renderIndentGuides": "always",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.stickyScroll.enabled": true,
+  "settingsSync.ignoredExtensions": [
+    "usernamehw.errorlens"
+  ]
 }

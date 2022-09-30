@@ -50,6 +50,7 @@ alias ls="exa"
 alias cat="bat"
 alias python=python3
 alias pip=pip3
+alias weather="curl https://wttr.in/bielsko-biala"
 
 alias gcof="git checkout \$(git branch -a | fzf)"
 
