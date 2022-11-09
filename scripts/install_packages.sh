@@ -27,7 +27,6 @@ brew install \
     firefox \
     fzf \
     gh \
-    git \
     git-delta \
     gnupg \
     htop \
@@ -39,8 +38,9 @@ brew install \
 
 brew install --cask \
     alacritty \
+    google-chrome \
     karabiner-elements \
-    postman
+    postman \
     qnapi \
     transmission \
     visual-studio-code \
