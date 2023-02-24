@@ -31,7 +31,10 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.bracketPairColorization.enabled": true,
-  "editor.codeActionsOnSave": ["source.formatDocument", "source.fixAll.eslint"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.formatDocument": true
+  },
   "editor.cursorBlinking": "solid",
   "editor.cursorStyle": "line",
   "editor.cursorWidth": 3,
@@ -60,8 +63,8 @@
   "extensions.ignoreRecommendations": false,
   "files.enableTrash": false,
   "files.exclude": {
-    "**/tags": true,
-    "node_modules/": true
+    "**/tags": true
+    // "node_modules/": true
   },
   "files.trimTrailingWhitespace": true,
   "git.enableSmartCommit": true,
@@ -113,7 +116,17 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.stickyScroll.enabled": true,
-  "settingsSync.ignoredExtensions": [
-    "usernamehw.errorlens"
-  ]
+  "settingsSync.ignoredExtensions": ["usernamehw.errorlens"],
+  "errorLens.enabledDiagnosticLevels": ["warning", "info", "error"],
+  "errorLens.messageMaxChars": 0,
+  "go.gotoSymbol.includeImports": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": false,
+  "formattingToggle.affects": [
+    "editor.codeActionsOnSave.source.fixAll.eslint",
+    "editor.codeActionsOnSave.source.formatDocument"
+  ],
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  }
 }
