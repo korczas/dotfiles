@@ -26,8 +26,8 @@
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 
-[url "git@github.com:karhoo"]
-  insteadOf = "https://github.com/karhoo"
+[url "git@gitlab.com:"]
+	insteadOf = https://gitlab.com/
 
 [delta]
     features = decorations
@@ -44,8 +44,8 @@
     hunk-header-line-number-style = "#067a00"
     hunk-header-style = file line-number syntax
 [credential "https://github.com"]
-	helper = 
+	helper =
 	helper = !/usr/local/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
+	helper =
 	helper = !/usr/local/bin/gh auth git-credential
