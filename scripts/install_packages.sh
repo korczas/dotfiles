@@ -31,7 +31,8 @@ brew install \
     gnupg \
     htop \
     imagemagick \
-    python@3.7 \
+    mas \
+    pyenv \
     ripgrep \
     tmux \
     zsh
@@ -42,9 +43,16 @@ brew install --cask \
     karabiner-elements \
     postman \
     qnapi \
+    raycast \
     transmission \
     visual-studio-code \
     vlc
 
 asdf plugin add nodejs
 asdf plugin add golang
+
+pyenv install 3.12.0
+
+# mas - cli for mac app store
+mas lucky \
+    trello
