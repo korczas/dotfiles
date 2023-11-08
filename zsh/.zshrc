@@ -71,3 +71,8 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH" # prioritize homebrew bins
 
 # Completion configuration
 zstyle ':completion:*' menu select
+
+# Source custom functions
+for file in ~/.zsh_custom/*.zsh; do
+  source $file
+done
