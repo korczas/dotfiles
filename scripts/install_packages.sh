@@ -19,7 +19,6 @@ brew install \
 brew install --cask \
     alacritty \
     google-chrome \
-    karabiner-elements \
     postman \
     qnapi \
     raycast \
