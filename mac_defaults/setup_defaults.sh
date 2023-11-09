@@ -43,6 +43,8 @@ defaults write com.apple.screensaver.lastDelayTime -int 1200
 ## turn off accented characters when holding down a key - requires logout
 defaults write -g ApplePressAndHoldEnabled -bool false
 
+defaults write -g AppleFontSmoothing -int 0
+
 # "com.apple.keyboard.modifiermapping.1452-832-0" =         (
 #                 {
 #         HIDKeyboardModifierMappingDst = 30064771113;
