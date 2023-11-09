@@ -1,3 +1,5 @@
+#!/bin/bash
+
 mkdir -p ~/.config/alacritty
 
 ln -vsf ~/.repos/dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml

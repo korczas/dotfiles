@@ -1,3 +1,5 @@
+#!/bin/bash
+
 case "$(uname -s)" in
   Darwin)
     cp -r ~/.repos/dotfiles/resources/fonts ~/Library/Fonts/

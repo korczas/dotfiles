@@ -1,3 +1,5 @@
+#!/bin/bash
+
 brew install \
     asdf \
     bat \
@@ -13,6 +15,7 @@ brew install \
     mas \
     reattach-to-user-namespace \
     ripgrep \
+    tldr \
     tmux \
     zsh
 
