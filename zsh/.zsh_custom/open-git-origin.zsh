@@ -26,5 +26,3 @@ function open-git-origin() {
     return 1
   fi
 }
-
-alias gitopen='open-git-origin'

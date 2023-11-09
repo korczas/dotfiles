@@ -1,3 +1,11 @@
+# Source
+## custom functions
+for file in ~/.zsh_custom/*.zsh; do
+  source $file
+done
+## asdf shims
+source /opt/homebrew/opt/asdf/libexec/asdf.sh
+
 # History behavior
 setopt EXTENDED_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
@@ -39,6 +47,7 @@ alias tmuxrc="${EDITOR:-code} ~/.tmux.conf"
 
 ## Git
 alias gcof="git checkout \$(git branch -a | fzf)"
+alias gitopen='open-git-origin'
 
 ## Global aliases
 alias -g F='| fzf --exact'
@@ -67,12 +76,15 @@ RPROMPT='%D{%K:%M:%S}'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Path configuration
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH" # prioritize homebrew bins
+
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # Completion configuration
 zstyle ':completion:*' menu select
 
-# Source custom functions
-for file in ~/.zsh_custom/*.zsh; do
-  source $file
-done

@@ -33,6 +33,7 @@ brew install --cask \
 asdf plugin add nodejs
 asdf plugin add golang
 asdf plugin add python
+asdf plugin add bun
 
 # mas - cli for mac app store
 mas lucky \
