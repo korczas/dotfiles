@@ -69,7 +69,8 @@ alias dcd="docker-compose down"
 
 ## Misc
 alias weather="curl https://wttr.in/bielsko-biala"
-alias heictojpg="magick mogrify -monitor -format jpg *.HEIC"
+alias heic-to-jpg="magick mogrify -monitor -format jpg *.HEIC"
+alias update-aws-credentials='update-aws-credentials'
 
 # Prompt customization
 RPROMPT='%D{%K:%M:%S}'
