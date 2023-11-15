@@ -47,6 +47,7 @@ alias tmuxrc="${EDITOR:-code} ~/.tmux.conf"
 
 ## Git
 alias gcof="git checkout \$(git branch -a | fzf)"
+alias gbdf="git branch -D \$(git branch | fzf -m)"
 alias gitopen='open-git-origin'
 
 ## Global aliases
