@@ -1,0 +1,78 @@
+is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
+    | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?)(diff)?$'"
+color_black="#1D2128"
+color_yellow="#E5C07B"
+light_separator="#[bg=$color_black,fg=$color_yellow]│#[default]"
+separator="#[bg=$color_black,fg=$color_yellow]#[default]"
+separator_reverse="#[bg=$color_yellow,fg=$color_black]#[default]"
+
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+
+# Settings
+set -g default-shell /bin/zsh
+set -g default-terminal 'tmux-256color'
+set -as terminal-overrides ',*:Tc'
+set -g monitor-silence 0
+set -g mouse on
+set -g base-index 1
+set -g renumber-windows on
+set -s set-clipboard off
+setw -g pane-base-index 1
+
+# Bindings
+set -g prefix C-space
+
+# use system clipboard
+bind -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "reattach-to-user-namespace pbcopy"
+
+bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'select-pane -t=; copy-mode -e; send-keys -M'"
+bind -n WheelDownPane select-pane -t= \; send-keys -M
+
+bind h if-shell "$is_vim" "send-keys C-w h"  "select-pane -L"
+bind j if-shell "$is_vim" "send-keys C-w j"  "select-pane -D"
+bind k if-shell "$is_vim" "send-keys C-w k"  "select-pane -U"
+bind l if-shell "$is_vim" "send-keys C-w l"  "select-pane -R"
+bind -T copy-mode-vi C-h select-pane -L
+bind -T copy-mode-vi C-j select-pane -D
+bind -T copy-mode-vi C-k select-pane -U
+bind -T copy-mode-vi C-l select-pane -R
+bind C-f resize-pane -Z
+bind C-w kill-pane
+# bind -n M-\{ previous-window
+# bind -n M-\} next-window
+
+# when creating new panes / windows use current pane path instead of one where tmux was launched
+bind r display-message "current root: #{pane_current_path}"
+bind A attach-session -c "#{pane_current_path}" \; display-message "root set to: #{pane_current_path}"
+bind C new-window -c "#{pane_current_path}"
+bind '"' split-window -c "#{pane_current_path}"
+bind % split-window -h -c "#{pane_current_path}"
+bind @ choose-window 'join-pane -h -s "%%"'
+bind ! choose-window 'break-pane'
+bind ` choose-window 'swap-window -t "%%"'
+
+# name tmux window with current path
+set-option -g status-interval 5
+set-option -g automatic-rename on
+set-option -g automatic-rename-format '#(basename "#{pane_current_path}")'
+
+# Display
+set -g status on
+set -g status-position top
+set -g status-justify "left"
+set -g status-left-length 60
+set -g status-right-length 250
+set -g status-bg $color_black
+set -g status-fg $color_yellow
+
+set -g status-left "#[default]"
+
+setw -g window-status-format " #[fg=$color_yellow, bg=$color_black] #I #W #F  "
+setw -g window-status-current-format "$separator_reverse#[fg=$color_black, bg=$color_yellow] #I #W #F $separator"
+
+set-option -g focus-events on
+# set-option -sg escape-time 10
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+# run '~/.tmux/plugins/tpm/tpm'

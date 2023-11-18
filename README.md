@@ -30,3 +30,19 @@ sh ./scripts/setup_tmux_plugins.sh
 ```bash
 sh ./testing/test-drive-terminal.sh
 ```
+
+- install tmux plugins. Run tmux
+
+```bash
+<leader> + I
+```
+
+## Config details
+
+### tmux
+
+- <leader> is set to Control-Space
+
+## NOTES:
+
+- if I start using vim then install this vim plugin to work with tmux https://github.com/christoomey/vim-tmux-navigator

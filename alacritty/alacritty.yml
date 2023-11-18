@@ -743,6 +743,8 @@ key_bindings:
   - { key: L, mods: Command, chars: "\x00\x6c" }
   - { key: LBracket, mods: Command|Control, chars: "\x00\x70" }
   - { key: RBracket, mods: Command|Control, chars: "\x00\x6e" }
+  - { key: Left, mods: Command|Alt, chars: "\x00\x70" }
+  - { key: Right, mods: Command|Alt, chars: "\x00\x6e" }
   # end of custom
 
   - { key: Paste, action: Paste }
