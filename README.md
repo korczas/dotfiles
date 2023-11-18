@@ -2,7 +2,9 @@
 
 - [ ] describe installation process
 - [x] update alacritty config
-- [ ] update tmux config
+- [x] update tmux config
+- [ ] verification scripts for: mac defaults, package install, symlinks, fonts(?)
+- [ ] cpu usage custom module for tmux Catppuccin
 - [ ] ???
 
 ## Installation process:
@@ -22,7 +24,6 @@ sh ./scripts/copy_fonts.sh
 sh ./scripts/install_packages.sh
 sh ./scripts/setup_ohmyzsh.sh
 sh ./scripts/setup_symlinks.sh
-sh ./scripts/setup_tmux_plugins.sh
 ```
 
 - test terminal and tmux. Run command in terminal and in tmux. Compare with expected output from link in script file.
