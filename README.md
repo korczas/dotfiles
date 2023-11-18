@@ -1,7 +1,7 @@
 # TODO:
 
 - [ ] describe installation process
-- [ ] update alacritty config
+- [x] update alacritty config
 - [ ] update tmux config
 - [ ] ???
 
