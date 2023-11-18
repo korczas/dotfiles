@@ -5,6 +5,7 @@
 - [x] update tmux config
 - [ ] verification scripts for: mac defaults, package install, symlinks, fonts(?)
 - [ ] cpu usage custom module for tmux Catppuccin
+- [ ] go pro webcam install
 - [ ] ???
 
 ## Installation process:
