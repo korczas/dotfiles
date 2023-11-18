@@ -4,7 +4,7 @@ for file in ~/.zsh_custom/*.zsh; do
   source $file
 done
 ## asdf shims
-source /opt/homebrew/opt/asdf/libexec/asdf.sh
+# source /opt/homebrew/opt/asdf/libexec/asdf.sh # TODO: fix - not working
 
 # History behavior
 setopt EXTENDED_HISTORY
@@ -14,7 +14,7 @@ setopt HIST_VERIFY
 
 export DEFAULT_USER=$(whoami)
 export ZSH=$HOME/.oh-my-zsh
-plugins=(git tmux common-aliases z zsh-autosuggestions zsh-syntax-highlighting alias-tips brew asdf)
+plugins=(git common-aliases z zsh-autosuggestions zsh-syntax-highlighting alias-tips brew asdf)
 
 # ZSH Theme
 ZSH_THEME="powerlevel10k/powerlevel10k"
