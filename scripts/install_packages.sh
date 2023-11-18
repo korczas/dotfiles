@@ -1,11 +1,14 @@
 #!/bin/bash
 
+brew tap homebrew/cask-fonts
+
 brew install \
     asdf \
     bat \
     diff-so-fancy \
     exa \
     firefox \
+    font-hasklug-nerd-font \
     fzf \
     gh \
     git-delta \
