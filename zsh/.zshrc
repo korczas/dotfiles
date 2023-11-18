@@ -1,3 +1,22 @@
+# #
+# # Start profiling (uncomment when necessary)
+# #
+# # See: https://stackoverflow.com/a/4351664/2103996
+
+# # Per-command profiling:
+
+# zmodload zsh/datetime
+# setopt promptsubst
+# PS4='+$EPOCHREALTIME %N:%i> '
+# exec 3>&2 2> startlog.$$
+# setopt xtrace prompt_subst
+
+# # Per-function profiling:
+
+# zmodload zsh/zprof
+
+# # # # # # # # # # # # # # # # # # # # # # #
+
 # Source
 ## custom functions
 for file in ~/.zsh_custom/*.zsh; do
@@ -90,3 +109,30 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH" # prioritize homebrew bins
 # Completion configuration
 zstyle ':completion:*' menu select
 
+# Perform compinit only once a day.
+autoload -Uz compinit
+
+setopt EXTENDEDGLOB
+for dump in $ZSH_COMPDUMP(#qN.m1); do
+  compinit
+  if [[ -s "$dump" && (! -s "$dump.zwc" || "$dump" -nt "$dump.zwc") ]]; then
+    zcompile "$dump"
+  fi
+  echo "Initializing Completions..."
+done
+unsetopt EXTENDEDGLOB
+compinit -C
+
+# # # # # # # # # # # # # # # # # # # # # # #
+# #
+# # End profiling (uncomment when necessary)
+# #
+
+# # Per-command profiling:
+
+# unsetopt xtrace
+# exec 2>&3 3>&-
+
+# # Per-function profiling:
+
+# zprof > /tmp/foo
