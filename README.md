@@ -24,6 +24,7 @@ sh ./scripts/copy_fonts.sh
 sh ./scripts/install_packages.sh
 sh ./scripts/setup_ohmyzsh.sh
 sh ./scripts/setup_symlinks.sh
+sh ./scripts/setup_tmux_plugins.sh
 ```
 
 - test terminal and tmux. Run command in terminal and in tmux. Compare with expected output from link in script file.
