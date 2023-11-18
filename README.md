@@ -44,6 +44,16 @@ sh ./testing/test-drive-terminal.sh
 
 - <leader> is set to Control-Space
 
+## Troubleshooting
+
+- in case if tmux is not working correctly run
+
+```bash
+infocmp tmux-256color
+```
+
+if you see `infocmp: couldn't open terminfo file (null).` then follow this https://gist.github.com/bbqtd/a4ac060d6f6b9ea6fe3aabe735aa9d95
+
 ## NOTES:
 
 - if I start using vim then install this vim plugin to work with tmux https://github.com/christoomey/vim-tmux-navigator
