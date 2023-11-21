@@ -31,6 +31,8 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt HIST_VERIFY
 
+export TMUXIFIER_LAYOUT_PATH="$HOME/.config/tmux/plugins/tmuxifier/layouts"
+export EDITOR="code -w"
 export DEFAULT_USER=$(whoami)
 export ZSH=$HOME/.oh-my-zsh
 plugins=(git common-aliases z zsh-autosuggestions zsh-syntax-highlighting alias-tips brew asdf)
@@ -57,6 +59,8 @@ alias cat="bat"
 ## Tmux
 alias tmux="tmux -u"
 alias tnew="tmux -u new-session -t main"
+alias tflw="tmuxifier load-window"
+alias tfls="tmuxifier load-session"
 
 ## File access
 alias dotfiles="cd $DOTFILES_PATH"
@@ -98,9 +102,10 @@ RPROMPT='%D{%K:%M:%S}'
 
 # Path configuration
 
-# bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$HOME/.config/tmux/plugins/tmuxifier/bin:$PATH"
+eval "$(tmuxifier init -)"
 export PATH="/usr/local/bin:/usr/local/sbin:$PATH" # prioritize homebrew bins
 
 # bun completions
