@@ -1,12 +1,3 @@
-# TODO:
-
-- [ ] describe installation process
-- [x] update alacritty config
-- [x] update tmux config
-- [ ] verification scripts for: mac defaults, package install, symlinks, fonts(?)
-- [ ] cpu usage custom module for tmux Catppuccin
-- [ ] go pro webcam install
-- [ ] ???
 
 ## Installation process:
 
@@ -16,18 +7,20 @@
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-- install brew packages
+- install packages
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/korczas/dotfiles/main/scripts/install_packages.sh)"
 ```
 
+- [setup github ssh](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
+
 - download the repository to you local machine
 
 ```bash
-mkdir .repos
-cd .repos
-git clone https://github.com/korczas/dotfiles.git
+mkdir .repos && \
+cd .repos && \
+git clone https://github.com/korczas/dotfiles.git && \
 cd dotfiles
 ```
 
@@ -40,9 +33,9 @@ sh ./mac_defaults/setup_defaults.sh
 - run scripts to install and config applications.
 
 ```bash
-sh ./scripts/copy_fonts.sh
-sh ./scripts/setup_ohmyzsh.sh
-sh ./scripts/setup_symlinks.sh
+sh ./scripts/copy_fonts.sh && \
+sh ./scripts/setup_ohmyzsh.sh && \
+sh ./scripts/setup_symlinks.sh && \
 sh ./scripts/setup_tmux_plugins.sh
 ```
 
@@ -74,6 +67,17 @@ infocmp tmux-256color
 
 if you see `infocmp: couldn't open terminfo file (null).` then follow this https://gist.github.com/bbqtd/a4ac060d6f6b9ea6fe3aabe735aa9d95
 
-## NOTES:
+## PERSONAL NOTES:
 
 - if I start using vim then install this vim plugin to work with tmux https://github.com/christoomey/vim-tmux-navigator
+
+## TODO:
+
+- [x] describe installation process
+- [x] update alacritty config
+- [x] update tmux config
+- [ ] update driver testing script (true color render)
+- [ ] update manual checklist
+- [ ] verification scripts for: mac defaults, package install, symlinks, fonts(?)
+- [ ] go pro webcam install
+- [ ] ???
