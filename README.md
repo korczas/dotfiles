@@ -10,7 +10,26 @@
 
 ## Installation process:
 
-...
+- install brew package mangager
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+- install brew packages
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/korczas/dotfiles/main/scripts/install_packages.sh)"
+```
+
+- download the repository to you local machine
+
+```bash
+mkdir .repos
+cd .repos
+git clone https://github.com/korczas/dotfiles.git
+cd dotfiles
+```
 
 - set mac defaults. Some changes might need restart (to be confirmed)
 
@@ -22,7 +41,6 @@ sh ./mac_defaults/setup_defaults.sh
 
 ```bash
 sh ./scripts/copy_fonts.sh
-sh ./scripts/install_packages.sh
 sh ./scripts/setup_ohmyzsh.sh
 sh ./scripts/setup_symlinks.sh
 sh ./scripts/setup_tmux_plugins.sh
