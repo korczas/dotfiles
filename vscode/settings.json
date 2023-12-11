@@ -32,8 +32,8 @@
   },
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.formatDocument": true
+    "source.fixAll.eslint": false,
+    "source.formatDocument": false
   },
   "editor.cursorBlinking": "solid",
   "editor.cursorStyle": "line",
@@ -46,7 +46,7 @@
   "editor.inlineSuggest.enabled": true,
   "editor.letterSpacing": 0.5,
   "editor.lineHeight": 25,
-  "editor.renderWhitespace": "trailing",
+  "editor.renderWhitespace": "none",
   "editor.rulers": [80, 100, 110, 120],
   "editor.suggestSelection": "first",
   "editor.tabSize": 2,
@@ -100,11 +100,10 @@
     "[x]"
   ],
   "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
-  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifier": "relative",
   "typescript.preferences.importModuleSpecifierEnding": "minimal",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "workbench.colorTheme": "Bluloco Dark Italic",
-  "workbench.editor.focusRecentEditorAfterClose": false,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.layoutControl.enabled": false,
   "workbench.tree.indent": 24,
@@ -128,5 +127,13 @@
   ],
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
-  }
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
+  },
+  "workbench.editor.focusRecentEditorAfterClose": false,
+  "editor.minimap.maxColumn": 80,
+  "editor.minimap.scale": 2,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.showSlider": "always"
 }
