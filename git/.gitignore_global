@@ -334,3 +334,6 @@ Sessionx.vim
 !.vscode/*.code-snippets
 
 # End of https://www.toptal.com/developers/gitignore/api/go,vim,node,tags,macos,visualstudiocode,jetbrains+all
+
+# asdf
+.tool-versions
