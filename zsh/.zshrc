@@ -66,7 +66,7 @@ alias tfls="tmuxifier load-session"
 alias dotfiles="cd $DOTFILES_PATH"
 alias zshrc="${EDITOR:-code} $DOTFILES_PATH/zsh/.zshrc"
 alias alacrittyrc="${EDITOR:-code} $DOTFILES_PATH/alacritty/alacritty.yml"
-alias tmuxrc="${EDITOR:-code} ~/.tmux.conf"
+alias tmuxrc="${EDITOR:-code} $DOTFILES_PATH/tmux/tmux.conf"
 
 ## Git
 alias gcof="git checkout \$(git branch -a | fzf)"
