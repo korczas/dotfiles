@@ -18,9 +18,9 @@
 - download the repository to you local machine
 
 ```bash
-mkdir .repos && \
-cd .repos && \
-git clone https://github.com/korczas/dotfiles.git && \
+mkdir .repos
+cd .repos
+git clone https://github.com/korczas/dotfiles.git
 cd dotfiles
 ```
 
@@ -33,9 +33,9 @@ sh ./mac_defaults/setup_defaults.sh
 - run scripts to install and config applications.
 
 ```bash
-sh ./scripts/copy_fonts.sh && \
-sh ./scripts/setup_ohmyzsh.sh && \
-sh ./scripts/setup_symlinks.sh && \
+sh ./scripts/copy_fonts.sh
+sh ./scripts/setup_ohmyzsh.sh
+sh ./scripts/setup_symlinks.sh
 sh ./scripts/setup_tmux_plugins.sh
 ```
 
