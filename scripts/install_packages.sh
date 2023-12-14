@@ -38,6 +38,9 @@ asdf plugin add golang
 asdf plugin add python
 asdf plugin add bun
 
+asdf install python 3.8.18
+asdf global python 3.8.18
+
 # mas - cli for mac app store
 mas lucky \
     trello
