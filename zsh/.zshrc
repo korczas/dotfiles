@@ -69,14 +69,14 @@ alias alacrittyrc="${EDITOR:-code} $DOTFILES_PATH/alacritty/alacritty.yml"
 alias tmuxrc="${EDITOR:-code} $DOTFILES_PATH/tmux/tmux.conf"
 
 ## Git
-alias gcof="git checkout \$(git branch -a | fzf)"
+alias gcof="git checkout \$(git branch -a | fzf | sed \"s:remotes/[^/]*/::\")"
 alias gbdf="git branch -D \$(git branch | fzf -m)"
 alias gitopen='open-git-origin'
 
 ## Global aliases
 alias -g F='| fzf --exact'
 alias -g C='| cat'
-alias -g G='| grep -v'
+alias -g G='| grep'
 
 ## Docker aliases and functions
 function dcc() {
@@ -118,13 +118,13 @@ zstyle ':completion:*' menu select
 autoload -Uz compinit
 
 setopt EXTENDEDGLOB
-for dump in $ZSH_COMPDUMP(#qN.m1); do
-  compinit
-  if [[ -s "$dump" && (! -s "$dump.zwc" || "$dump" -nt "$dump.zwc") ]]; then
-    zcompile "$dump"
-  fi
-  echo "Initializing Completions..."
-done
+# for dump in $ZSH_COMPDUMP(#qN.m1); do
+#   compinit
+#   if [[ -s "$dump" && (! -s "$dump.zwc" || "$dump" -nt "$dump.zwc") ]]; then
+#     zcompile "$dump"
+#   fi
+#   echo "Initializing Completions..."
+# done
 unsetopt EXTENDEDGLOB
 compinit -C
 
