@@ -337,3 +337,6 @@ Sessionx.vim
 
 # asdf
 .tool-versions
+
+# claude code
+.claude/*.local.*
