@@ -1,0 +1,104 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Overview
+
+This is a personal macOS dotfiles repository that manages development environment configuration through symlinks and shell scripts. The setup uses Oh My Zsh with Powerlevel10k theme, tmux with custom layouts, Alacritty terminal, and various development tools managed via Homebrew and asdf.
+
+## Setup Commands
+
+### Initial Installation
+```bash
+# Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install packages and dependencies
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/korczas/dotfiles/main/scripts/install_packages.sh)"
+
+# Clone repository
+mkdir .repos && cd .repos
+git clone https://github.com/korczas/dotfiles.git
+cd dotfiles
+```
+
+### Configuration Setup
+```bash
+# Set macOS defaults
+sh ./mac_defaults/setup_defaults.sh
+
+# Install fonts, Oh My Zsh, symlinks, and tmux plugins
+sh ./scripts/copy_fonts.sh
+sh ./scripts/setup_ohmyzsh.sh
+sh ./scripts/setup_symlinks.sh
+sh ./scripts/setup_tmux_plugins.sh
+
+# Test terminal setup
+sh ./testing/test-drive-terminal.sh
+```
+
+### Post-Installation
+```bash
+# Install tmux plugins (run inside tmux)
+<Ctrl-Space> + I
+```
+
+## Architecture
+
+### Configuration Structure
+- **alacritty/**: Terminal emulator configuration
+- **tmux/**: Tmux configuration and custom session layouts
+- **zsh/**: Zsh shell configuration with Oh My Zsh and Powerlevel10k
+- **git/**: Git configuration with delta diff viewer
+- **vscode/**: VS Code settings and extension management
+- **asdf/**: Version manager configuration for Node.js, Python, Go, Bun
+
+### Key Components
+
+#### Symlink Management
+The `scripts/setup_symlinks.sh` creates symbolic links from the dotfiles repo to standard config locations:
+- `~/.config/alacritty/alacritty.yml` → `alacritty/alacritty.yml`
+- `~/.config/tmux/tmux.conf` → `tmux/tmux.conf`
+- `~/.zshrc` → `zsh/.zshrc`
+- `~/.gitconfig` → `git/.gitconfig`
+
+#### Tmux Layouts
+Custom tmux session layouts are stored in `tmux/layouts/` and managed via tmuxifier plugin. Sessions include:
+- `communicate.session.sh` - Main communication app development session
+- Various window layouts for different components
+
+#### Package Management
+- **Homebrew**: Primary package manager for macOS tools
+- **asdf**: Runtime version manager for development languages
+- **Oh My Zsh**: Zsh framework with plugins for git, autosuggestions, syntax highlighting
+
+## Key Tools and Aliases
+
+### Shell Aliases
+- `ls` → `exa` (modern ls replacement)
+- `cat` → `bat` (syntax highlighting cat)
+- `gcof` - Git checkout with fzf branch selection
+- `gbdf` - Git branch delete with fzf selection
+- `dotfiles` - Quick navigation to dotfiles directory
+- `zshrc`, `tmuxrc`, `alacrittyrc` - Quick config file editing
+
+### Tmux Configuration
+- Prefix key: `Ctrl-Space`
+- Vim-style pane navigation (`h`, `j`, `k`, `l`)
+- Custom key bindings for window/pane management
+- Catppuccin theme with custom status bar
+
+### Development Environment
+- Default editor: VS Code (`code -w`)
+- Terminal: Alacritty with MesloLGS Nerd Font
+- Shell: Zsh with Powerlevel10k prompt
+- Git diff viewer: Delta with side-by-side view
+- Fuzzy finder: fzf with ripgrep integration
+
+## Testing and Verification
+
+Use `testing/test-drive-terminal.sh` to verify terminal colors and fonts are working correctly after setup.
+
+## Language Runtimes
+
+Default Python version is set to 3.8.18 via asdf. Node.js, Go, and Bun are available but versions are managed per-project basis.
