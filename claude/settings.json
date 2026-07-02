@@ -32,8 +32,19 @@
       }
     ]
   },
-  "enabledPlugins": {},
-  "extraKnownMarketplaces": {},
+  "enabledPlugins": {
+    "typescript-lsp@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true,
+    "skill-creator@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {
+    "claude-plugins-official": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-official"
+      }
+    }
+  },
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
   "tui": "fullscreen",
