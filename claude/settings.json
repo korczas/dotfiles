@@ -7,7 +7,7 @@
     "allow": [],
     "deny": []
   },
-  "model": "opus",
+  "model": "sonnet",
   "hooks": {
     "Stop": [
       {
@@ -15,7 +15,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "afplay /System/Library/Sounds/Glass.aiff"
+            "command": "~/.claude/hooks/play-sound.sh stop"
           }
         ]
       }
@@ -26,7 +26,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "afplay /System/Library/Sounds/Frog.aiff"
+            "command": "~/.claude/hooks/play-sound.sh notification"
           }
         ]
       }

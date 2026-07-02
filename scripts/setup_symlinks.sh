@@ -23,9 +23,11 @@ ln -vsf ~/.repos/dotfiles/zsh/.zshrc.local ~/.zshrc.local
 
 ln -vsf ~/.repos/dotfiles/tmux/layouts ~/.config/tmux/plugins/tmuxifier
 
-# Claude Code config (settings + hooks). Replace a pre-existing real hooks dir with
-# a symlink; -n keeps re-runs from nesting the link inside an existing symlink.
+# Claude Code config (settings + hooks + skills). Replace pre-existing real dirs with
+# symlinks; -n keeps re-runs from nesting the link inside an existing symlink.
 mkdir -p ~/.claude
 ln -vsf ~/.repos/dotfiles/claude/settings.json ~/.claude/settings.json
 [ -L ~/.claude/hooks ] || rm -rf ~/.claude/hooks
 ln -vsfn ~/.repos/dotfiles/claude/hooks ~/.claude/hooks
+[ -L ~/.claude/skills ] || rm -rf ~/.claude/skills
+ln -vsfn ~/.repos/dotfiles/claude/skills ~/.claude/skills
