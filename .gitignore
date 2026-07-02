@@ -1,1 +1,8 @@
 **/.DS_Store
+
+# Per-machine local zsh config (bootstrapped from zsh/.zshrc.local.example)
+zsh/.zshrc.local
+
+# Work-specific tmux layouts (per-machine); keep the dir so the symlink target exists
+tmux/layouts/*
+!tmux/layouts/.gitkeep

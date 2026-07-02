@@ -16,4 +16,9 @@ ln -vsf ~/.repos/dotfiles/zsh/.zshrc ~/.zshrc
 ln -vsf ~/.repos/dotfiles/zsh/.p10k.zsh ~/.p10k.zsh
 ln -vsf ~/.repos/dotfiles/zsh/.zsh_custom ~/.zsh_custom
 
+# Per-machine local zsh config: bootstrap from the example (never clobber an
+# existing one), then symlink it into place. The real file is gitignored.
+cp -n ~/.repos/dotfiles/zsh/.zshrc.local.example ~/.repos/dotfiles/zsh/.zshrc.local
+ln -vsf ~/.repos/dotfiles/zsh/.zshrc.local ~/.zshrc.local
+
 ln -vsf ~/.repos/dotfiles/tmux/layouts ~/.config/tmux/plugins/tmuxifier

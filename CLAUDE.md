@@ -50,7 +50,6 @@ sh ./testing/test-drive-terminal.sh
 - **tmux/**: Tmux configuration and custom session layouts
 - **zsh/**: Zsh shell configuration with Oh My Zsh and Powerlevel10k
 - **git/**: Git configuration with delta diff viewer
-- **vscode/**: VS Code settings and extension management
 - **asdf/**: Version manager configuration for Node.js, Python, Go, Bun
 
 ### Key Components
@@ -60,12 +59,14 @@ The `scripts/setup_symlinks.sh` creates symbolic links from the dotfiles repo to
 - `~/.config/alacritty/alacritty.yml` → `alacritty/alacritty.yml`
 - `~/.config/tmux/tmux.conf` → `tmux/tmux.conf`
 - `~/.zshrc` → `zsh/.zshrc`
+- `~/.zshrc.local` → `zsh/.zshrc.local`
 - `~/.gitconfig` → `git/.gitconfig`
 
+#### Zsh Core vs. Per-Machine Config
+`zsh/.zshrc` is the shared core (committed, synced across machines). Machine/env-specific config (work vs. private) lives in `zsh/.zshrc.local`, which is gitignored and sourced last so it can override the core. On setup, `setup_symlinks.sh` bootstraps it from the tracked `zsh/.zshrc.local.example` template (via `cp -n`, never clobbering an existing file). Shared, generic functions still live in `zsh/.zsh_custom/*.zsh`.
+
 #### Tmux Layouts
-Custom tmux session layouts are stored in `tmux/layouts/` and managed via tmuxifier plugin. Sessions include:
-- `communicate.session.sh` - Main communication app development session
-- Various window layouts for different components
+Custom tmux session and window layouts live in `tmux/layouts/` and are managed via the tmuxifier plugin. These layouts are machine/work-specific, so their contents are gitignored (only a `.gitkeep` is tracked to preserve the directory as the symlink target). Add per-machine `*.session.sh` and `*.window.sh` files there locally.
 
 #### Package Management
 - **Homebrew**: Primary package manager for macOS tools
@@ -80,7 +81,7 @@ Custom tmux session layouts are stored in `tmux/layouts/` and managed via tmuxif
 - `gcof` - Git checkout with fzf branch selection
 - `gbdf` - Git branch delete with fzf selection
 - `dotfiles` - Quick navigation to dotfiles directory
-- `zshrc`, `tmuxrc`, `alacrittyrc` - Quick config file editing
+- `zshrc`, `zshrclocal`, `tmuxrc`, `alacrittyrc` - Quick config file editing
 
 ### Tmux Configuration
 - Prefix key: `Ctrl-Space`
