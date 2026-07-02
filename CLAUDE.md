@@ -50,6 +50,7 @@ sh ./testing/test-drive-terminal.sh
 - **tmux/**: Tmux configuration and custom session layouts
 - **zsh/**: Zsh shell configuration with Oh My Zsh and Powerlevel10k
 - **git/**: Git configuration with delta diff viewer
+- **claude/**: Claude Code settings and hooks (symlinked into `~/.claude`)
 - **asdf/**: Version manager configuration for Node.js, Python, Go, Bun
 
 ### Key Components
@@ -67,6 +68,12 @@ The `scripts/setup_symlinks.sh` creates symbolic links from the dotfiles repo to
 
 #### Tmux Layouts
 Custom tmux session and window layouts live in `tmux/layouts/` and are managed via the tmuxifier plugin. These layouts are machine/work-specific, so their contents are gitignored (only a `.gitkeep` is tracked to preserve the directory as the symlink target). Add per-machine `*.session.sh` and `*.window.sh` files there locally.
+
+#### Claude Code Config
+`claude/settings.json` and `claude/hooks/` are symlinked to `~/.claude/settings.json`
+and `~/.claude/hooks` by `setup_symlinks.sh`, so Claude Code config is version-controlled
+here. The hook scripts load secrets via `python-dotenv` at runtime (nothing sensitive is
+committed).
 
 #### Package Management
 - **Homebrew**: Primary package manager for macOS tools
